@@ -1,0 +1,62 @@
+.connect-section {
+  padding: 6rem 2rem 4rem 2rem;
+  text-align: center;
+  color: #fff;
+  background-color: #000000; /* Matches dark theme */
+}
+
+.connect-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.connect-subheading {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.connect-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.connect-card {
+  background: rgba(30, 30, 30, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+}
+
+.connect-card:hover {
+  transform: translateY(-10px);
+  border-color: #f94892;
+}
+
+.card-icon {
+  margin-bottom: 1.5rem;
+  color: #f94892;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #c4c4c4;
+  line-height: 1.5;
+}

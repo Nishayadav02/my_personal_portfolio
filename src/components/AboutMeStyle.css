@@ -1,0 +1,112 @@
+/* Main container for the About section */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+/* Main heading for the section */
+.about-heading {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    z-index: 2; /* Keep heading above background name */
+}
+
+/* Wrapper for the text and image to align them side-by-side */
+.about-content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Space between text and image */
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 2; /* Keeps content above background name */
+}
+
+/* Text content block */
+.aboutMe-text {
+    max-width: 60%;
+    color: #ccc;
+    text-align: left;
+    z-index: 2;
+    line-height: 1.8;
+}
+
+.aboutMe-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.aboutMe-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Highlighted text within paragraphs */
+.aboutMe-text span {
+    /* --- COLOR CHANGE --- */
+    color: #8a4fff; /* New accent purple color */
+    font-weight: 500;
+}
+
+/* Resume link style */
+.aboutMe-text .resume {
+    /* --- COLOR CHANGE --- */
+    color: #8a4fff; /* New accent purple color */
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.aboutMe-text .resume:hover {
+    /* --- COLOR CHANGE --- */
+    border-bottom: 2px solid #8a4fff; /* New accent purple on hover */
+}
+
+/* Container for the profile image */
+.aboutMe-image {
+    max-width: 40%;
+}
+
+.aboutMe-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Adds rounded corners */
+}
+
+/* Large decorative name in the background */
+.background-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20vw;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.03);
+    z-index: 1;
+    user-select: none;
+    white-space: nowrap;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .about-content-wrapper {
+        flex-direction: column; 
+        text-align: center;
+        gap: 30px;
+    }
+
+    .aboutMe-text,
+    .aboutMe-image {
+        max-width: 100%; 
+    }
+}

@@ -1,0 +1,152 @@
+/* Main header styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    box-sizing: border-box;
+    /* Optional: Add a subtle bottom border to separate from content */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Logo styling */
+.header .logo {
+    cursor: pointer;
+}
+
+.header .logo .logo-img {
+    font-size: 50px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.header .logo .logo-img span {
+    font-weight: 600;
+    /* --- COLOR CHANGE --- */
+    color: #8a4fff; /* New accent purple */
+}
+
+.header .logo .logo-img .blink {
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0% { color: #8a4fff; }
+    50% { color: transparent; }
+    100% { color: #8a4fff; }
+}
+
+/* Container for navigation and social links */
+.nav-group {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.nav-menu li {
+    padding: 0 15px;
+}
+
+/* Individual navigation links */
+.nav-menu li .navLink {
+    font-size: 16px;
+    font-weight: 500;
+    color: #e0e0e0; /* Slightly softer white for non-active links */
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* --- COLOR CHANGE for hover and active states --- */
+.nav-menu li .navLink:hover,
+.nav-menu li .navLink.active {
+    color: #8a4fff; /* New accent purple */
+}
+
+/* Social media icons section */
+.header .social-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.header .social-links a {
+    margin: 0 10px;
+    color: #e0e0e0; /* Set a base color for the icons */
+}
+
+.header .social-links .social {
+    transition: all 0.3s ease-in-out;
+}
+
+.header .social-links .social:hover {
+    transform: scale(1.2);
+    /* --- COLOR CHANGE for social icon hover --- */
+    color: #8a4fff; /* Use color for react-icons, fill is for SVGs */
+}
+
+/* Hamburger menu icon (hidden on desktop) */
+.header .hamburger {
+    display: none;
+}
+
+/* ================== MOBILE STYLES (Media Query) ================== */
+@media screen and (max-width: 900px) {
+    .header {
+        padding: 0 20px;
+    }
+
+    .header .hamburger {
+        display: block;
+        z-index: 110;
+    }
+
+    .nav-group {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(18, 18, 18, 0.95);
+        backdrop-filter: blur(20px);
+        transition: right 0.5s ease-in-out;
+        z-index: 105;
+    }
+
+    .nav-group.active {
+        right: 0;
+    }
+
+    .header .nav-menu {
+        flex-direction: column;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .nav-menu li {
+        padding: 20px 0;
+    }
+
+    .nav-menu li .navLink {
+        font-size: 20px;
+    }
+
+    .header .social-links {
+        flex-direction: row;
+    }
+}
